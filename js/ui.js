@@ -7,6 +7,7 @@ class ui {
       .querySelector(".center form")
       .addEventListener("submit", function(e) {
         self.searchData(e.target.children[0].children[0].value);
+        e.preventDefault();
       });
     this.mainimg = document.querySelector(".weathericon");
     this.clearinput = document.querySelector(".center form input");
