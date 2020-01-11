@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="https://img.pngio.com/weather-targeting-weather-png-350_350.jpg"
+    />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+      integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI="
+      crossorigin="anonymous"
+    />
+    <!-- won styles -->
+    <link rel="stylesheet" href="./css/style.prefixe.css" />
+    <title>Weather | Application</title>
+  </head>
+  <body>
+    <nav>
+      <div class="center">
+        <form>
+          <div class="u-center">
+            <input
+              type="text"
+              class="input"
+              id="search"
+              placeholder="Search You'r Location.."
+            />
+            <a href="#" class="search-for-location-btn"
+              ><i class="fas fa-search"></i
+            ></a>
+          </div>
+        </form>
+      </div>
+    </nav>
+    <main>
+      <section class="section-1">
+        <div class="expline-weather-1">
+          <div class="lodear"></div>
+          <div class="ani">
+            <div class="weather-grid">
+              <div class="currentcity">
+                <h4 class="city">Nellore <span class="state">,In</span></h4>
+              </div>
+            </div>
+
+            <div class="weather-grid weather-grid-2">
+              <div class="weathericon">
+                <img src="./img/01d.svg" alt="" />
+              </div>
+              <div class="tem">
+                <h2>31ºC</h2>
+              </div>
+            </div>
+
+            <div class="weather-info">
+              <h3 class="humidity">
+                Humidity : <span class="p-value">52</span>
+                <span clss="parst">%</span>
+              </h3>
+              <h3 class="wind">
+                Wind : <span class="p-value">16</span>
+                <span clss="km/h">km/h</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-2">
+        <div class="expline-weather-2">
+          <div class="lodear"></div>
+          <ul>
+            <li class="li_cityname">
+              <h3>Kavali <span class="state">,In</span></h3>
+              <span>28ºC</span>
+              <img src="./img/01d.svg" alt="" />
+            </li>
+            <li class="li_cityname">
+              <h3>Kavali <span class="state">,In</span></h3>
+              <span>28ºC</span>
+              <img src="./img/01d.svg" alt="" />
+            </li>
+            <li class="li_cityname">
+              <h3>Kavali <span class="state">,In</span></h3>
+              <span>28ºC</span>
+              <img src="./img/01d.svg" alt="" />
+            </li>
+            <li class="li_cityname">
+              <h3>Kavali <span class="state">,In</span></h3>
+              <span>28ºC</span>
+              <img src="./img/01d.svg" alt="" />
+            </li>
+            <li class="li_cityname">
+              <h3>Kavali <span class="state">,In</span></h3>
+              <span>28ºC</span>
+              <img src="./img/01d.svg" alt="" />
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="copyright">
+        2019, Nagasai jithin
+      </div>
+    </footer>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/ui.js"></script>
+  </body>
+</html>

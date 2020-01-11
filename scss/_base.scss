@@ -1,0 +1,19 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+html {
+  font-size: 62.5%;
+
+  @include mediaquery(tablet-land) {
+    font-size: 58.5%;
+  }
+}
+
+body {
+  background-color: $bodycolor;
+  box-sizing: border-box;
+}

@@ -1,0 +1,66 @@
+@mixin centerPosition{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin mediaquery($maxsize){
+
+    @if $maxsize == phone {
+        @media screen and (max-width: 48em) {  @content }
+        /*
+        // 768px / 1em (16px) = 48em
+        */
+    }
+    @if $maxsize == lphone {
+        @media screen and (max-width: 44.81em) {  @content }
+        /*
+        // 728px / 1em (16px) = 44.81em
+        */
+    }
+    @if $maxsize == mphone {
+        @media screen and (max-width: 36.25em) {  @content }
+        /*
+        // 580px / 1em (16px) = 36.25em
+        */
+    }
+    @if $maxsize == s2phone {
+        @media screen and (max-width: 28.12em) {  @content }
+        /*
+        // 450px / 1em (16px) = 28.12em
+        */
+    }
+    @if $maxsize == s3phone {
+        @media screen and (max-width: 22.75em) {  @content }
+        /*
+        // 364px / 1em (16px) = 28.12em
+        */
+    }
+    @if $maxsize == s4phone {
+        @media screen and (max-width: 20em) {  @content }
+        /*
+        // 320px / 1em (16px) = 28.12em
+        */
+    }
+    @if $maxsize == sphone {
+        @media screen and (max-width: 32.37em) {  @content }
+        /*
+        // 518px / 1em (16px) = 32.37em
+        */
+    }
+
+    @if $maxsize == tablet-port {
+        @media screen and (max-width: 57em) { @content }
+        /*
+        912px / 1em (16px) = 57em
+        */
+    }
+    @if $maxsize == tablet-land {
+        @media screen and (max-width: 68.18em) { @content }
+    /*
+     1024 px / 1em (16px) = 68.18em
+    */
+        
+    }
+}
