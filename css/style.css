@@ -172,7 +172,7 @@ main {
         border-left: 3px solid transparent;
         border-radius: 50%;
         transition: all 0.5s ease-in;
-        animation: loader .3s linear infinite; }
+        animation: loader 0.3s linear infinite; }
       main .section-1 .expline-weather-1 .ani {
         visibility: hidden;
         transition: all 0.5s ease-in; }
@@ -367,7 +367,7 @@ main {
         border-left: 3px solid transparent;
         border-radius: 50%;
         transition: all 0.5s ease-in;
-        animation: loader .3s linear infinite; }
+        animation: loader 0.3s linear infinite; }
       main .section-2 .expline-weather-2 ul {
         visibility: hidden;
         height: 100%;

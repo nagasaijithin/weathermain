@@ -1,247 +1,240 @@
-main{
-    max-width: 100%;
-    height: 77vh;
-    margin:1rem 4rem;
-    color: $maincolor;
+main {
+  max-width: 100%;
+  height: 77vh;
+  margin: 1rem 4rem;
+  color: $maincolor;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  @include mediaquery(lphone) {
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    @include mediaquery(lphone ){
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(2, auto);
+    height: 200vh;
+  }
+
+  & .section-1 {
+    width: 100%;
+    position: relative;
+    transition: all 0.5s ease-in;
+    & .expline-weather-1 {
+      @include centerPosition;
+      background-color: $bodycolor;
+      width: 80%;
+      height: 80%;
+      border-radius: 5px;
+      box-shadow: 0.8rem 0.8rem 1.6rem rgba(black, 0.4);
+      transition: all 0.4s ease-in;
+      padding: 2rem;
+      color: $maincolor;
+      @include mediaquery(tablet-land) {
+        padding: 3rem;
+      }
+      @include mediaquery(s3phone) {
+        height: 60%;
+      }
+
+      &:hover {
+        box-shadow: 0.6rem 0.6rem 1.3rem rgba(black, 0.2);
+      }
+      & .lodear {
+        @include centerPosition;
+        width: 10rem;
+        height: 10rem;
+        border-bottom: 3px solid $maincolor;
+        border-right: 3px solid transparent;
+        border-left: 3px solid transparent;
+        border-radius: 50%;
+        transition: all 0.5s ease-in;
+        animation: loader 0.3s linear infinite;
+      }
+      & .ani {
+        visibility: hidden;
+        transition: all 0.5s ease-in;
+        & .weather-grid {
+          display: grid;
+          grid-template-columns: repeat(2, auto);
+          justify-content: space-around;
+          grid-template-rows: repeat(3, 4.5rem);
+          @include mediaquery(tablet-land) {
+            grid-template-rows: repeat(4, 4.4rem);
+          }
+          @include mediaquery(s3phone) {
+            grid-template-rows: repeat(3, 4.4rem);
+          }
+
+          & .currentcity {
+            font-size: 4.5rem;
+            @include mediaquery(tablet-land) {
+              font-size: 5.3rem;
+            }
+            @include mediaquery(lphone) {
+              font-size: 4.7rem;
+            }
+            @include mediaquery(s2phone) {
+              font-size: 4.7rem;
+            }
+            @include mediaquery(sphone) {
+              font-size: 4.2rem;
+            }
+            @include mediaquery(s3phone) {
+              font-size: 2.6rem;
+            }
+            @include mediaquery(s4phone) {
+              font-size: 2.4rem;
+            }
+          }
+
+          & .weathericon {
+            & img {
+              width: 15rem;
+              height: 15rem;
+            }
+          }
+          & .tem {
+            font-size: 4rem;
+
+            @include mediaquery(tablet-land) {
+              font-size: 4.2rem;
+            }
+            @include mediaquery(lphone) {
+              font-size: 5.5rem;
+            }
+            @include mediaquery(s2phone) {
+              font-size: 4.7rem;
+            }
+            @include mediaquery(s3phone) {
+              font-size: 3.5rem;
+            }
+            @include mediaquery(s4phone) {
+              font-size: 3rem;
+            }
+          }
+        }
+        & .weather-grid-2 {
+          grid-template-rows: repeat(4, 5rem);
+          @include mediaquery(lphone) {
+            grid-template-rows: repeat(3, 5rem);
+          }
+          @include mediaquery(s3phone) {
+            grid-template-rows: repeat(3, 4.5rem);
+          }
+        }
+        & .weather-info {
+          display: grid;
+          grid-template-columns: repeat(2, auto);
+          justify-content: space-around;
+          font-size: 2rem;
+          @include mediaquery(tablet-port) {
+            font-size: 1.7rem;
+          }
+          @include mediaquery(lphone) {
+            font-size: 2.5rem;
+          }
+
+          @include mediaquery(mphone) {
+            font-size: 2.2rem;
+            grid-gap: 3px;
+          }
+          @include mediaquery(sphone) {
+            font-size: 2rem;
+            grid-gap: 3px;
+          }
+          @include mediaquery(s2phone) {
+            font-size: 1.5rem;
+            grid-gap: 3px;
+          }
+          @include mediaquery(s3phone) {
+            font-size: 1.4rem;
+            grid-gap: 3px;
+          }
+          @include mediaquery(s4phone) {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  & .section-2 {
+    width: 100%;
+    position: relative;
+    transition: all 0.5s ease-in;
+    & .expline-weather-2 {
+      @include centerPosition;
+      background-color: $bodycolor;
+      width: 80%;
+      height: 80%;
+      border-radius: 5px;
+      box-shadow: 0.8rem 0.8rem 1.6rem rgba(black, 0.4);
+      transition: all 0.4s ease-in;
+      padding: 2rem;
+      @include mediaquery(tablet-land) {
+        padding: 3rem;
+      }
+
+      &:hover {
+        box-shadow: 0.6rem 0.6rem 1.3rem rgba(black, 0.2);
+      }
+      & .lodear {
+        @include centerPosition;
+        width: 10rem;
+        height: 10rem;
+        border-bottom: 3px solid $maincolor;
+        border-right: 3px solid transparent;
+        border-left: 3px solid transparent;
+        border-radius: 50%;
+        transition: all 0.5s ease-in;
+        animation: loader 0.3s linear infinite;
+      }
+      & ul {
+        visibility: hidden;
+        height: 100%;
         display: grid;
-        grid-template-columns: repeat(1,auto); 
-        grid-template-rows: repeat(2,auto); 
-        height: 200vh;
-    }
-
-    & .section-1{
-        width: 100%;
-        position: relative;
+        list-style-type: none;
         transition: all 0.5s ease-in;
-        & .expline-weather-1{
-            @include centerPosition;
-            background-color: $bodycolor;
-            width: 80%;
-            height: 80%;
-            border-radius: 5px;
-            box-shadow: .8rem .8rem 1.6rem rgba(black,0.4);
-            transition: all 0.4s ease-in;
-            padding: 2rem;
-            color: $maincolor;
-            @include mediaquery(tablet-land ){
-                padding: 3rem;
-            }
-            @include mediaquery(s3phone ){
-                height: 60%;
-            }
+        & .li_cityname {
+          align-items: center;
+          display: grid;
+          grid-template-columns: repeat(3, auto);
+          justify-content: space-around;
+          font-size: 1.8rem;
+          border: 1px solid rgba($maincolor, 0.4);
+          padding: 1rem;
+          color: $maincolor;
+          cursor: pointer;
+          transition: all 0.3s ease-in;
 
-            &:hover{
-                box-shadow: .6rem .6rem 1.3rem rgba(black,0.2);
-               
-            }
-            & .lodear{
-                @include centerPosition;
-                width: 10rem;
-                height: 10rem;
-                border-bottom: 3px solid $maincolor;
-                border-right: 3px solid transparent;
-                border-left: 3px solid transparent;
-                border-radius: 50%;
-                transition:all 0.5s ease-in;
-                animation: loader .3s linear infinite;
-                
-            }
-            & .ani{
-                visibility: hidden;
-                transition: all 0.5s ease-in;
-                & .weather-grid{
-                    display: grid;
-                    grid-template-columns: repeat(2,auto);
-                    justify-content: space-around;
-                    grid-template-rows: repeat(3,4.5rem);
-                    @include mediaquery(tablet-land ){
-                        grid-template-rows: repeat(4, 4.4rem);
-                    }
-                    @include mediaquery(s3phone ){
-                        grid-template-rows: repeat(3, 4.4rem);
-                    }
-       
-                    & .currentcity{
-                        font-size: 4.5rem;
-                        @include mediaquery(tablet-land ){
-                            font-size: 5.3rem;
-                        }
-                        @include mediaquery(lphone ){
-                            font-size: 4.7rem;
-                        }
-                        @include mediaquery(s2phone ){
-                            font-size: 4.7rem;
-                        }
-                        @include mediaquery(sphone ){
-                            font-size: 4.2rem;
-                        }
-                        @include mediaquery(s3phone ){
-                            font-size: 2.6rem;
-                        }
-                        @include mediaquery(s4phone ){
-                            font-size: 2.4rem;
-                        }
-                    }
-    
-                    & .weathericon{
-                        & img{
-                            width: 15rem;
-                            height: 15rem;
-                        }
-                    }
-                    & .tem {
-                        font-size: 4rem;
-                        
-                        @include mediaquery(tablet-land ){
-                            font-size: 4.2rem;
-                        }
-                        @include mediaquery(lphone ){
-                            font-size: 5.5rem;
-                        }
-                        @include mediaquery(s2phone ){
-                            font-size: 4.7rem;
-                        }
-                        @include mediaquery(s3phone ){
-                            font-size: 3.5rem;
-                        }
-                        @include mediaquery(s4phone ){
-                            font-size: 3rem;
-                        }
-                    }
-                }
-                & .weather-grid-2 {
-                    grid-template-rows: repeat(4, 5rem);
-                    @include mediaquery(lphone ){
-                        grid-template-rows: repeat(3, 5rem);
-                    }
-                    @include mediaquery(s3phone ){
-                        grid-template-rows: repeat(3, 4.5rem);
-                    }
-                }
-                & .weather-info{
-                    display: grid;
-                    grid-template-columns: repeat(2, auto);
-                    justify-content: space-around;
-                    font-size: 2rem;
-                    @include mediaquery(tablet-port){
-                        font-size: 1.7rem;
-                    }
-                    @include mediaquery(lphone ){
-                        font-size: 2.5rem;
-                    }
-                    
-                    @include mediaquery(mphone ){
-                        font-size: 2.2rem;
-                        grid-gap: 3px;
-                    }
-                    @include mediaquery(sphone ){
-                        font-size: 2rem;
-                        grid-gap: 3px;
-                    }
-                    @include mediaquery(s2phone ){
-                        font-size: 1.5rem;
-                        grid-gap: 3px;
-                    }
-                    @include mediaquery(s3phone ){
-                        font-size: 1.4rem;
-                        grid-gap: 3px;
-                    }
-                    @include mediaquery(s4phone ){
-                        font-size: 1rem;
-                    }
-                }
-    
-            }
-           
+          @include mediaquery(sphone) {
+            font-size: 1.6rem;
+          }
+          @include mediaquery(s3phone) {
+            font-size: 1.2rem;
+          }
+          @include mediaquery(s4phone) {
+            font-size: 1.1rem;
+          }
+          &:hover {
+            box-shadow: 0.6rem 0.6rem 1.3rem rgba(black, 0.2);
+            transform: scale(1.02);
+          }
+          & img {
+            width: 5rem;
+            height: 5rem;
+          }
         }
+      }
     }
-    
-    & .section-2 {
-        width: 100%;
-        position: relative;
-        transition: all 0.5s ease-in;
-        & .expline-weather-2{
-            @include centerPosition;
-            background-color: $bodycolor;
-            width: 80%;
-            height: 80%;
-            border-radius: 5px;
-            box-shadow: .8rem .8rem 1.6rem rgba(black,0.4);
-            transition: all 0.4s ease-in;
-            padding: 2rem;
-            @include mediaquery(tablet-land ){
-                padding: 3rem;
-            }
-            
-            &:hover{
-                box-shadow: .6rem .6rem 1.3rem rgba(black,0.2);
-                
-            }
-            & .lodear{
-                @include centerPosition;
-                width: 10rem;
-                height: 10rem;
-                border-bottom: 3px solid $maincolor;
-                border-right: 3px solid transparent;
-                border-left: 3px solid transparent;
-                border-radius: 50%;
-                transition:all 0.5s ease-in;
-                animation: loader .3s linear infinite;
-                
-            }
-            & ul{
-                visibility: hidden;
-               height: 100%;
-               display: grid;
-               list-style-type: none;
-               transition: all 0.5s ease-in;
-                & .li_cityname {
-                    align-items: center;
-                    display: grid;
-                    grid-template-columns: repeat(3,auto);
-                    justify-content: space-around;
-                    font-size: 1.8rem;
-                    border: 1px solid  rgba($maincolor,0.4);
-                    padding: 1rem;
-                    color: $maincolor;
-                    cursor: pointer;
-                    transition: all 0.3s ease-in;
-
-                    @include mediaquery(sphone){
-                        font-size: 1.6rem;
-                    }
-                    @include mediaquery(s3phone){
-                        font-size: 1.2rem;
-                    }
-                    @include mediaquery(s4phone){
-                        font-size: 1.1rem;
-                    }
-                    &:hover {
-                        box-shadow: .6rem .6rem 1.3rem rgba(black,0.2);
-                        transform:scale(1.02);
-                    }
-                    & img{
-                        width: 5rem;
-                        height: 5rem;
-                    }
-
-                }
-            }
-        }
-    }
+  }
 }
 
-.copyright{
-    right: 1.4rem;
-    position: absolute;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: rgba($maincolor,0.6);
-    font-size: 1.16rem;
-    @include mediaquery(lphone ){
-        margin: 3rem;
-    }
+.copyright {
+  right: 1.4rem;
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba($maincolor, 0.6);
+  font-size: 1.16rem;
+  @include mediaquery(lphone) {
+    margin: 3rem;
+  }
 }

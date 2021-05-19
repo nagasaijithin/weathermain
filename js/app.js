@@ -28,7 +28,7 @@ class getData {
       const data = await getCurrentLocation({
         enableHighAccuracy: true,
         // this are getCurrentPosition  defalut options
-        maximumAge: 0
+        maximumAge: 0,
         // this are getCurrentPosition  defalut options its tell about time we put inegers values like milli secondes
       });
       this.coords = [data.coords.latitude, data.coords.longitude];
@@ -40,7 +40,7 @@ class getData {
 
   async renderData(clati, clong, cnt) {
     let url = await fetch(
-      `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/find?lat=${clati}&lon=${clong}&cnt=${cnt}&appid=92cae619e9bc27685050aeebb868248c`
+      `http://api.openweathermap.org/data/2.5/find?lat=${clati}&lon=${clong}&cnt=${cnt}&appid=92cae619e9bc27685050aeebb868248c`
     );
     let rdata = url.json();
     return rdata;
@@ -52,11 +52,9 @@ class getData {
 
   async searchingCity(inputvalue) {
     var searchCity = await fetch(
-      `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${inputvalue}&appid=92cae619e9bc27685050aeebb868248c`
+      `http://api.openweathermap.org/data/2.5/weather?q=${inputvalue}&appid=92cae619e9bc27685050aeebb868248c`
     );
     var rdata = searchCity.json();
     return rdata;
   }
 }
-
-// http://api.openweathermap.org/data/2.5/find?lat=14.45&lon=79.99&cnt=9&appid=92cae619e9bc27685050aeebb868248c
