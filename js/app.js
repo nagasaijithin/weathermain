@@ -40,7 +40,7 @@ class getData {
 
   async renderData(clati, clong, cnt) {
     let url = await fetch(
-      `http://api.openweathermap.org/data/2.5/find?lat=${clati}&lon=${clong}&cnt=${cnt}&appid=92cae619e9bc27685050aeebb868248c`
+      `https://api.openweathermap.org/data/2.5/find?lat=${clati}&lon=${clong}&cnt=${cnt}&appid=92cae619e9bc27685050aeebb868248c`
     );
     let rdata = url.json();
     return rdata;
@@ -52,7 +52,7 @@ class getData {
 
   async searchingCity(inputvalue) {
     var searchCity = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${inputvalue}&appid=92cae619e9bc27685050aeebb868248c`
+      `https://api.openweathermap.org/data/2.5/weather?q=${inputvalue}&appid=92cae619e9bc27685050aeebb868248c`
     );
     var rdata = searchCity.json();
     return rdata;
